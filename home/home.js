@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((user) => {
       if (user) {
         document.getElementById("welcomeMessage").innerHTML = `Welcome, ${user.fullname}!`;
+
+        document.getElementById("profile").innerHTML = `${user.fullname[0]}`
       } else {
         document.getElementById("errorMessage").innerHTML = `User not found`;
       }

@@ -1,3 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../home/images/homepic.png');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  color: #f1f1f1;
+  padding-top: 12px;
+}
+
+/* home page */
+.main-container nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.main-container .logo {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.main-container .logo h1{
+  color: red;
+  margin-bottom: -8px;
+}
+
+.main-container .logo span {
+  font-size: 10px;
+}
+
+.main-container .links {
+  display: flex;
+  gap: 20px;
+}
+
+.main-container .links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 22px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container #profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.userData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.withSearch {
+  display: flex;
+  gap: 5px;
+  margin-top: 120px;
+  position: relative;
+  justify-content: center;
+}
+
+.withSearch input {
+  width: 60%;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+.withSearch button {
+  border: none;
+  outline: none;
+  position: absolute;
+  background: transparent;
+  font-size: 16px;font-weight: bold;
+  top: 13px;
+  right: 22vw;
+  cursor: pointer;
+}
+
+.main-container .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.main-container .footer .socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.main-container .footer .socials p {
+  color: red;
+}
+
+.main-container .footer ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.main-container .footer ul li a{
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 20px;
+}f1f1f1
+
+/* auth */
+
 .register-container {
   display: flex;
   justify-content: center;

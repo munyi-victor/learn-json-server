@@ -4,11 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-  <div class="userData">
-    <h2 id="welcomeMessage"></h2>
-    <p id="errorMessage"></p>
+  <div class="main-container">
+    <nav>
+      <div class="logo">
+        <h1 class="logo">MovFlix</h1>
+        <span>All movies at Hand</span>
+      </div>
+
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="#">Latest</a>
+        <a href="#">Trending</a>
+      </div>
+
+      <button type="button" id="profile" title="profile">M</button>
+    </nav>
+
+    <div class="userData">
+      <h1 id="welcomeMessage"></h1>
+      <p id="errorMessage"></p>
+      <p>Search and find the latest movies and enjoy!</p>
+    </div>
+
+    <div class="withSearch">
+      <input type="search" name="search" id="search" placeholder="Search movies here"/>
+      <button type="button">Search</button>
+    </div>
+
+    <div class="footer">
+      <div class="socials">
+        <p>Follow us on Social Media</p>
+        <ul>
+          <li><a href="#" title="facebook">FB</a></li>
+          <li><a href="#" title="instagram">IG</a></li>
+          <li><a href="#" title="X(twitter)">X</a></li>
+          <li><a href="#" title="tiktok">TK</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p>
+          Made by Munyi Victor © 2024 - All Rights Reserved
+        <p>
+      </div>
+    </div>
   </div>
 
   <script src="home.js"></script>
