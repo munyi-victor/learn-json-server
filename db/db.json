@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "munyivictor",
+      "password": "Munyi006",
+      "fullname": "Munyi Victor"
+    },
+    {
+      "id": "2",
+      "username": "samki",
+      "password": "samking",
+      "fullname": "King Sam"
+    },
+    {
+      "id": "3",
+      "username": "jaycoof05",
+      "password": "jaycoof05",
+      "fullname": "Jacob Jay"
+    },
+    {
+      "id": 4,
+      "username": "jenkev",
+      "password": "jenkev",
+      "fullname": "Kev Jen"
+    }
+  ]
+}
