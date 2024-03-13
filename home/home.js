@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (user) {
         document.getElementById("welcomeMessage").innerHTML = `Welcome, ${user.fullname}!`;
 
-        document.getElementById("profile").innerHTML = `${user.fullname[0]}`
+        document.getElementById("profile").innerHTML = `${user.fullname[0]}`;
       } else {
         document.getElementById("errorMessage").innerHTML = `User not found`;
       }
