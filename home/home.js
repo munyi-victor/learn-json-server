@@ -4,16 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const loggedInFullname = sessionStorage.getItem("loggedInFullname");
 
   if (!loggedInUserId || !loggedInUsername) {
-    window.location.href = '../auth/login.html';
+    window.location.href = "../auth/login.html";
   }
 
   fetch(`http://localhost:3000/users/${loggedInUserId}`)
     .then((response) => response.json())
     .then((user) => {
       if (user) {
-        document.getElementById("welcomeMessage").innerHTML = `Welcome, ${user.fullname}!`;
+        document.getElementById(
+          "welcomeMessage"
+        ).innerHTML = `Welcome, ${user.fullname}!`;
 
-        document.getElementById("profile").innerHTML = `${user.fullname[0]}`;
+        if (user.profPic.length > 0) {
+          document.getElementById("preview").src = user.profPic;
+        } else {
+          document.getElementById("profile").innerHTML = `${user.fullname[0]}`;
+        }
       } else {
         document.getElementById("errorMessage").innerHTML = `User not found`;
       }
