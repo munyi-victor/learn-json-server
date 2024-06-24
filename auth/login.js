@@ -9,9 +9,7 @@ document.getElementById("user-login").addEventListener('submit', (event) => {
       const loggedInUser = users[0];
       console.log('Login successful: ', loggedInUser);
 
-      sessionStorage.setItem("loggedInUserId", loggedInUser.id);
-      sessionStorage.setItem('loggedInUsername', loggedInUser.username);
-      sessionStorage.setItem("loggedInFullname", loggedInUser.fullname);
+      localStorage.setItem("loggedInUserId", loggedInUser.id);
 
       window.location.href = "../home/home.html";
     } else {

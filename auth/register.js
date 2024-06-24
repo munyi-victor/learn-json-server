@@ -6,7 +6,7 @@ document
     const fullname = document.getElementById("fullname").value;
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    
+
     const profPic = "";
 
     var id = 1;

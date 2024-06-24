@@ -9,17 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.json())
     .then((user) => {
       if (user) {
-        document.getElementById(
-          "welcomeMessage"
-        ).innerHTML = `Welcome, ${user.fullname}!`;
-
         if (user.profPic.length > 0) {
           document.getElementById("preview").src = user.profPic;
         } else {
           document.getElementById("profile").innerHTML = `${user.fullname[0]}`;
         }
-      } else {
-        document.getElementById("errorMessage").innerHTML = `User not found`;
       }
     })
     .catch((error) => console.error("Error fetching user data:", error));

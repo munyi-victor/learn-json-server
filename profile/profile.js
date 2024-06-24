@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const loggedInUserId = sessionStorage.getItem("loggedInUserId");
-  const loggedInUsername = sessionStorage.getItem("loggedInUsername");
-  const loggedInFullname = sessionStorage.getItem("loggedInFullname");
+  const loggedInUserId = localStorage.getItem("loggedInUserId");
 
-  if (!loggedInUserId || !loggedInUsername) {
+  if (!loggedInUserId) {
     window.location.href = "../auth/login.html";
   }
 
@@ -15,11 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
           "profile-name"
         ).innerHTML = `${user.fullname}`;
 
-        document.getElementById("profile-username").innerHTML = `${user.username}`;
+        document.getElementById("profile-username").innerHTML = `@${user.username}`;
         
         if (user.profPic.length > 0) {
           document.getElementById("preview").src = user.profPic;
         } else {
+          document.getElementById("preview").style.display = "none";
           document.getElementById("prof").innerHTML = user.fullname[0];
         }
       } else {
@@ -56,7 +55,7 @@ function editProfBtn() {
 
 async function saveToServer(imageData) {
   try {
-    const loggedInUserId = sessionStorage.getItem("loggedInUserId");
+    const loggedInUserId = localStorage.getItem("loggedInUserId");
 
     const response = await fetch(
       `http://localhost:3000/users/${loggedInUserId}`,
@@ -80,5 +79,7 @@ async function saveToServer(imageData) {
 }
 
 function logOut() {
-  window.location.href = "../auth/login.html"
+  localStorage.clear();
+  sessionStorage.clear();
+  window.location.href = "../auth/login.html";
 }
