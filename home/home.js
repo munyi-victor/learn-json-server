@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!loggedInUserId || !loggedInUsername) {
     window.location.href = "../auth/login.html";
   }
-
+  
   fetch(`http://localhost:3000/users/${loggedInUserId}`)
     .then((response) => response.json())
     .then((user) => {

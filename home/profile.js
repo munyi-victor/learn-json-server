@@ -78,3 +78,7 @@ async function saveToServer(imageData) {
     console.error("Error: ", error);
   }
 }
+
+function logOut() {
+  window.location.href = "../auth/login.html"
+}
