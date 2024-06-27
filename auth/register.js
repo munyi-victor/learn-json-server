@@ -21,9 +21,13 @@ document
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Registration successful: ", data);
+        if (user.username === data.username) {
+          alert("username already exists!");
+        } else {
+          console.log("Registration successful: ", data);
 
-        window.location.href = "login.html";
+          window.location.href = "login.html";
+        }
       })
       .catch((error) => console.error("Error during registration:", error));
   });
