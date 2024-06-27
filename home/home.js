@@ -5,10 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "../auth/login.html";
   }
 
-  const users = fetch("http://localhost:3000/users").then(response => response.json())
-  console.log(users)
-
-
   fetch(`http://localhost:3000/users/${loggedInUserId}`)
     .then((response) => response.json())
     .then((user) => {
